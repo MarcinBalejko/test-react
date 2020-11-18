@@ -34,7 +34,7 @@ export class Test2 extends Component {
           <button
             onClick={this.addLike}
             style={{
-              backgroundColor: this.state.color === true ? "blue" : "white",
+              backgroundColor: this.state.color === true ? "blue" : "",
             }}
           >
             Like ({this.state.like})
@@ -42,7 +42,7 @@ export class Test2 extends Component {
           <button
             onClick={this.addDislike}
             style={{
-              backgroundColor: this.state.color === false ? "blue" : "white",
+              backgroundColor: this.state.color === false ? "blue" : "",
             }}
           >
             Dislike ({this.state.dislike})
