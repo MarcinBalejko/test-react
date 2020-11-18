@@ -33,3 +33,9 @@ export class Test2 extends Component {
 }
 
 export default Test2;
+
+// In this task I was asked to create a class component containing two buttons: Like and Dislike
+// Each button provides a counter which is set initially to 20 for likes and 15 for dislikes.
+// The number of likes and dislikes is contained in the component's state.
+// The task also specified that with each click of the like button it should change it's color to blue,
+// and correspondingly, the dislike button's color should be removed.
