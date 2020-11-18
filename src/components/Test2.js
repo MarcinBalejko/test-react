@@ -4,26 +4,47 @@ export class Test2 extends Component {
   state = {
     like: 20,
     dislike: 15,
+    color: false,
   };
 
   addLike = () => {
     const oldLikeCount = this.state.like;
     const newLikeCount = oldLikeCount + 1;
-    this.setState({ like: newLikeCount });
+    this.setState({
+      ...this.state,
+      like: newLikeCount,
+      color: true,
+    });
   };
 
   addDislike = () => {
     const oldDislikeCount = this.state.dislike;
     const newDislikeCount = oldDislikeCount + 1;
-    this.setState({ dislike: newDislikeCount });
+    this.setState({
+      ...this.state,
+      dislike: newDislikeCount,
+      color: false,
+    });
   };
 
   render() {
     return (
       <Fragment>
         <div>
-          <button onClick={this.addLike}>Like ({this.state.like})</button>
-          <button onClick={this.addDislike}>
+          <button
+            onClick={this.addLike}
+            style={{
+              backgroundColor: this.state.color === true ? "blue" : "white",
+            }}
+          >
+            Like ({this.state.like})
+          </button>
+          <button
+            onClick={this.addDislike}
+            style={{
+              backgroundColor: this.state.color === false ? "blue" : "white",
+            }}
+          >
             Dislike ({this.state.dislike})
           </button>
         </div>
